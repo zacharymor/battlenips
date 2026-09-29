@@ -10,7 +10,7 @@ export default function Home() {
           <span className="word-nips">nips</span>
         </h1>
         <p className="lede">
-          A public-domain photograph under a hundred squares. Find the one hiding the nipple.
+          The photograph stays in view. A hundred squares cover the chest.
         </p>
         <p className="stamp" aria-hidden="true">
           One
@@ -26,17 +26,17 @@ export default function Home() {
             <p>
               Battlenips is a one-guess picture game. A public-domain
               photograph from 1896–1901 shows sumo wrestler Konishiki
-              Yasokichi shirtless, in a mawashi, under a 10×10 grid. The lime
-              ring marks one square on his chest. The picture is from
-              Wikimedia Commons.
+              Yasokichi shirtless, in a mawashi. The 10×10 grid sits on his
+              chest, and the rest of the picture stays visible. The lime ring
+              marks one square there. The picture is from Wikimedia Commons.
             </p>
           </section>
           <section>
             <h2>How to play</h2>
             <ol className="steps">
               <li>
-                <span>Squares run from 1 to 100. 1 is the top-left. Numbers
-                go left to right, then down a row. 100 is the bottom-right.</span>
+                <span>The grid covers the chest. Squares run from 1 to 100.
+                1 is the top-left of that grid. 100 is the bottom-right.</span>
               </li>
               <li>
                 <span>Tap the square you think is covering it. You get one

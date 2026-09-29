@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 
 const SQUARES = 100;
-const TARGET = 34;
+const TARGET = 33;
 
 export function GameBoard() {
   const [guess, setGuess] = useState<number | null>(null);
@@ -46,8 +46,8 @@ export function GameBoard() {
       <div className="game-head">
         <h2 id="board-title">The board</h2>
         <p className="game-note">
-          Tiles stay shut until you tap. Then the photograph opens and the real
-          square gets a lime ring.
+          The photograph stays in view. The grid covers only the chest. Tiles
+          open when you tap, and the real square gets a lime ring.
         </p>
       </div>
 
@@ -74,7 +74,7 @@ export function GameBoard() {
       <div className="board">
         <Image
           src="/photo.jpg"
-          alt="Public-domain photograph of shirtless sumo wrestler Konishiki Yasokichi, hidden under the numbered grid."
+          alt="Public-domain photograph of shirtless sumo wrestler Konishiki Yasokichi. The numbered grid covers his chest."
           fill
           priority
           sizes="(max-width: 860px) 100vw, 560px"
@@ -83,7 +83,7 @@ export function GameBoard() {
         <div
           className="cells"
           role="group"
-          aria-label="10 by 10 grid. Square 1 is top-left. Square 100 is bottom-right."
+          aria-label="10 by 10 grid over the chest. Square 1 is top-left. Square 100 is bottom-right."
           aria-describedby={statusId}
         >
           {Array.from({ length: SQUARES }, (_, index) => {

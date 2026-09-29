@@ -17,7 +17,7 @@ const text = Fraunces({
 export const metadata: Metadata = {
   title: "Battlenips",
   description:
-    "A one-guess picture game. A public-domain photograph of shirtless sumo wrestler Konishiki Yasokichi hides under a 10×10 grid numbered 1 to 100.",
+    "A one-guess picture game. A public-domain photograph of shirtless sumo wrestler Konishiki Yasokichi, with a 10×10 grid over his chest.",
 };
 
 export const viewport: Viewport = {

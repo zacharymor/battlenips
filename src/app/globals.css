@@ -246,25 +246,27 @@ body {
 .board {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 395 / 457;
   border: 3px solid var(--ink);
   background: var(--ink);
   overflow: hidden;
 }
 
 .board-art {
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.mark-layer,
 .cells {
   position: absolute;
-  inset: 0;
+  left: 27.34%;
+  top: 28.01%;
+  width: 42.53%;
+  aspect-ratio: 1;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   grid-template-rows: repeat(10, minmax(0, 1fr));
-  gap: 3px;
-  padding: 3px;
+  gap: 1px;
+  z-index: 2;
 }
 
 .mark-layer {
@@ -330,7 +332,7 @@ body {
   left: 1px;
   font-family: var(--font-display), sans-serif;
   font-weight: 800;
-  font-size: clamp(0.48rem, 1.55vw, 0.72rem);
+  font-size: clamp(0.38rem, 0.9vw, 0.58rem);
   line-height: 1;
   background: rgba(255, 248, 232, 0.92);
   padding: 0.08rem 0.16rem 0.05rem;
