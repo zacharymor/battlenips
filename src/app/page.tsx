@@ -10,7 +10,7 @@ export default function Home() {
           <span className="word-nips">nips</span>
         </h1>
         <p className="lede">
-          A drawn sumo wrestler under a hundred squares. Find the one hiding the nipple.
+          A public-domain photograph under a hundred squares. Find the one hiding the nipple.
         </p>
         <p className="stamp" aria-hidden="true">
           One
@@ -24,10 +24,10 @@ export default function Home() {
           <section>
             <h2>What it is</h2>
             <p>
-              Battlenips is a one-guess picture game. A stylized sumo
-              wrestler sits under a 10×10 grid. The nipple is a printed
-              bullseye dealt onto that drawing — a graphic mark, not a
-              photograph of a real athlete.
+              Battlenips is a one-guess picture game. A 1956 public-domain
+              photograph of sumo wrestler Asashio Tarō III sits under a 10×10
+              grid. The lime ring marks one square on his chest. The picture
+              is from Wikimedia Commons.
             </p>
           </section>
           <section>
@@ -38,15 +38,16 @@ export default function Home() {
                 go left to right, then down a row. 100 is the bottom-right.</span>
               </li>
               <li>
-                <span>Tap the square you think is covering the bullseye. You
-                get one tap.</span>
+                <span>Tap the square you think is covering it. You get one
+                tap.</span>
               </li>
               <li>
-                <span>The board calls hit or miss, opens the drawing, and rings
-                the real square in lime.</span>
+                <span>The board calls hit or miss, opens the photograph, and
+                rings the real square in lime.</span>
               </li>
               <li>
-                <span>Play again deals the bullseye onto a new square.</span>
+                <span>Play again covers the same photograph. The square stays
+                put.</span>
               </li>
             </ol>
           </section>

@@ -1,44 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 const SQUARES = 100;
-
-function dealSquare() {
-  return 1 + Math.floor(Math.random() * SQUARES);
-}
-
-function columnOf(square: number) {
-  return ((square - 1) % 10) + 1;
-}
-
-function rowOf(square: number) {
-  return Math.floor((square - 1) / 10) + 1;
-}
-
-const subscribe = () => () => {};
+const TARGET = 45;
 
 export function GameBoard() {
-  const dealt = useRef<number[]>([]);
-  const [round, setRound] = useState(0);
   const [guess, setGuess] = useState<number | null>(null);
   const statusId = useId();
   const resultRef = useRef<HTMLHeadingElement>(null);
-
-  const target = useSyncExternalStore(
-    subscribe,
-    () => {
-      const existing = dealt.current[round];
-      if (existing !== undefined) {
-        return existing;
-      }
-      const square = dealSquare();
-      dealt.current[round] = square;
-      return square;
-    },
-    () => null,
-  );
+  const target = TARGET;
 
   const revealed = guess !== null && target !== null;
   const hit = revealed && guess === target;
@@ -58,7 +30,6 @@ export function GameBoard() {
 
   function playAgain() {
     setGuess(null);
-    setRound((current) => current + 1);
   }
 
   let status = "Dealing a square…";
@@ -75,7 +46,7 @@ export function GameBoard() {
       <div className="game-head">
         <h2 id="board-title">The board</h2>
         <p className="game-note">
-          Tiles stay shut until you tap. Then the drawing opens and the real
+          Tiles stay shut until you tap. Then the photograph opens and the real
           square gets a lime ring.
         </p>
       </div>
@@ -102,27 +73,13 @@ export function GameBoard() {
 
       <div className="board">
         <Image
-          src="/illustration.png"
-          alt="Stylized drawing of a sumo wrestler, hidden under the numbered grid."
+          src="/photo.jpg"
+          alt="Public-domain photograph of sumo wrestler Asashio Tarō III, hidden under the numbered grid."
           fill
           priority
           sizes="(max-width: 860px) 100vw, 560px"
           className="board-art"
         />
-        {target !== null ? (
-          <div className="mark-layer" aria-hidden="true">
-            <div
-              className="mark-cell"
-              style={{ gridColumn: columnOf(target), gridRow: rowOf(target) }}
-            >
-              <svg viewBox="0 0 64 64" className="nipple">
-                <circle cx="32" cy="32" r="24" fill="#ff2d6a" stroke="#1a120c" strokeWidth="3" />
-                <circle cx="32" cy="32" r="13" fill="#fff8e8" stroke="#1a120c" strokeWidth="3" />
-                <circle cx="32" cy="32" r="5" fill="#1a120c" />
-              </svg>
-            </div>
-          </div>
-        ) : null}
         <div
           className="cells"
           role="group"
