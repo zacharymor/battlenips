@@ -1,6 +1,10 @@
-import { GameBoard } from "@/components/game-board";
+import { LevelPlayer } from "@/components/level-player";
+import { listLevels } from "@/lib/levels";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const levels = await listLevels();
   return (
     <div className="page">
       <header className="mast">
@@ -25,10 +29,11 @@ export default function Home() {
             <h2>What it is</h2>
             <p>
               Battlenips is a one-guess picture game. A public-domain
-              photograph from 1896–1901 shows sumo wrestler Konishiki
-              Yasokichi shirtless, in a mawashi. The 10×10 grid sits on his
-              chest, and the rest of the picture stays visible. The lime ring
-              marks one square there. The picture is from Wikimedia Commons.
+              photograph with a 10×10 grid on the chest. Niptagger saves each
+              picture, grid, and winning squares as a level. The lime ring
+              marks every winning square. The starter picture is a
+              public-domain photograph of Konishiki Yasokichi from Wikimedia
+              Commons.
             </p>
           </section>
           <section>
@@ -47,13 +52,13 @@ export default function Home() {
                 rings the real square in lime.</span>
               </li>
               <li>
-                <span>Play again covers the same photograph. The square stays
-                put.</span>
+                <span>Play again loads the next level. With one level, it covers
+                the same photograph.</span>
               </li>
             </ol>
           </section>
         </article>
-        <GameBoard />
+        <LevelPlayer levels={levels} />
       </div>
     </div>
   );

@@ -246,21 +246,19 @@ body {
 .board {
   position: relative;
   width: 100%;
-  aspect-ratio: 395 / 457;
   border: 3px solid var(--ink);
   background: var(--ink);
   overflow: hidden;
 }
 
 .board-art {
-  object-fit: contain;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .cells {
   position: absolute;
-  left: 27.34%;
-  top: 28.01%;
-  width: 42.53%;
   aspect-ratio: 1;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
