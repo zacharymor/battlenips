@@ -103,7 +103,7 @@ export function GameBoard() {
       <div className="board">
         <Image
           src="/illustration.png"
-          alt="Stylized drawing of a figure, hidden under the numbered grid."
+          alt="Stylized drawing of a sumo wrestler, hidden under the numbered grid."
           fill
           priority
           sizes="(max-width: 860px) 100vw, 560px"

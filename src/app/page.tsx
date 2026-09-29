@@ -10,7 +10,7 @@ export default function Home() {
           <span className="word-nips">nips</span>
         </h1>
         <p className="lede">
-          A drawing under a hundred squares. Find the one hiding the nipple.
+          A drawn sumo wrestler under a hundred squares. Find the one hiding the nipple.
         </p>
         <p className="stamp" aria-hidden="true">
           One
@@ -24,9 +24,10 @@ export default function Home() {
           <section>
             <h2>What it is</h2>
             <p>
-              Battlenips is a one-guess picture game. A stylized drawing sits
-              under a 10×10 grid. The nipple is a printed bullseye dealt onto
-              that drawing — a graphic mark, not a photograph.
+              Battlenips is a one-guess picture game. A stylized sumo
+              wrestler sits under a 10×10 grid. The nipple is a printed
+              bullseye dealt onto that drawing — a graphic mark, not a
+              photograph of a real athlete.
             </p>
           </section>
           <section>

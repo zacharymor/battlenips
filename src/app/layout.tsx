@@ -17,7 +17,7 @@ const text = Fraunces({
 export const metadata: Metadata = {
   title: "Battlenips",
   description:
-    "A one-guess picture game. A stylized drawing hides under a 10×10 grid numbered 1 to 100. Tap the square you think is hiding the nipple.",
+    "A one-guess picture game. A stylized sumo wrestler hides under a 10×10 grid numbered 1 to 100. Tap the square you think is hiding the nipple.",
 };
 
 export const viewport: Viewport = {
