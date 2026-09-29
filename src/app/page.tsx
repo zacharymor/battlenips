@@ -24,10 +24,11 @@ export default function Home() {
           <section>
             <h2>What it is</h2>
             <p>
-              Battlenips is a one-guess picture game. A 1956 public-domain
-              photograph of sumo wrestler Asashio Tarō III sits under a 10×10
-              grid. The lime ring marks one square on his chest. The picture
-              is from Wikimedia Commons.
+              Battlenips is a one-guess picture game. A public-domain
+              photograph from 1896–1901 shows sumo wrestler Konishiki
+              Yasokichi shirtless, in a mawashi, under a 10×10 grid. The lime
+              ring marks one square on his chest. The picture is from
+              Wikimedia Commons.
             </p>
           </section>
           <section>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 
 const SQUARES = 100;
-const TARGET = 45;
+const TARGET = 34;
 
 export function GameBoard() {
   const [guess, setGuess] = useState<number | null>(null);
@@ -74,7 +74,7 @@ export function GameBoard() {
       <div className="board">
         <Image
           src="/photo.jpg"
-          alt="Public-domain photograph of sumo wrestler Asashio Tarō III, hidden under the numbered grid."
+          alt="Public-domain photograph of shirtless sumo wrestler Konishiki Yasokichi, hidden under the numbered grid."
           fill
           priority
           sizes="(max-width: 860px) 100vw, 560px"
